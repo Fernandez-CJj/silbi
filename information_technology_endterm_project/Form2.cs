@@ -103,5 +103,20 @@ namespace information_technology_endterm_project
             frm.Show();
             this.Close();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     } // closes RegisterPage class
 } // closes namespace
