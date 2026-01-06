@@ -16,7 +16,7 @@ namespace information_technology_endterm_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProfilerForm());
+            Application.Run(new Form1());
         }
     }
 }

@@ -81,5 +81,19 @@ namespace information_technology_endterm_project
             this.Hide();
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.BorderStyle = BorderStyle.None;
+
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+      
     }
 }
