@@ -8,12 +8,13 @@ namespace information_technology_endterm_project
     {
         private string profileId;
         private string connectionString = "server=localhost;user=root;password=;database=im_etr";
-
-        public EditProfile(string id)
+        int userId;
+        public EditProfile(string id, int user_id)
         {
             InitializeComponent();
             profileId = id;
             this.Load += EditProfile_Load;
+            userId = user_id;
         }
 
         private void EditProfile_Load(object sender, EventArgs e)
@@ -277,7 +278,7 @@ namespace information_technology_endterm_project
                     if (result > 0)
                     {
                         MessageBox.Show("Profile updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ViewProfiles frm = new ViewProfiles();
+                        ViewProfiles frm = new ViewProfiles(userId);
                         frm.Show();
                         this.Close();
                     }

@@ -17,9 +17,11 @@ namespace information_technology_endterm_project
         int health = 0;
         int school = 0;
         string selectedId = "";
-        public ViewProfiles()
+        int userId;
+        public ViewProfiles(int id)
         {
             InitializeComponent();
+            userId = id;
         }
 
         private void ViewProfiles_Load(object sender, EventArgs e)
@@ -401,9 +403,69 @@ namespace information_technology_endterm_project
                 MessageBox.Show("Please select a profile to edit.", "No selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            EditProfile frm = new EditProfile(selectedId);
+            EditProfile frm = new EditProfile(selectedId, userId);
             frm.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProfilerForm frm = new ProfilerForm(userId);
+            frm.Show();
+            this.Hide();
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void DeleteAccountButton_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+        "Are you sure you want to DELETE your account? This cannot be undone.",
+        "Confirm Delete Account",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Warning
+    );
+
+            if (confirm == DialogResult.Yes)
+            {
+                string connectionString = "server=localhost;user=root;password=;database=im_etr";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string sql = "DELETE FROM users WHERE id = @id";
+                        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", userId);
+                            int rows = cmd.ExecuteNonQuery();
+
+                            if (rows > 0)
+                            {
+                                MessageBox.Show("Account deleted successfully. Logging out...");
+
+                              
+                                Form1 login = new Form1();
+                                login.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Delete failed: Account not found.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting account: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }

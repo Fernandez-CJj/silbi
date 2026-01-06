@@ -86,6 +86,9 @@ namespace information_technology_endterm_project
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.HealthIfYesBox.SuspendLayout();
             this.rbShoolIfYesBox.SuspendLayout();
@@ -96,17 +99,19 @@ namespace information_technology_endterm_project
             this.ageBox.SuspendLayout();
             this.sexBox.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 19);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(364, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 20);
+            this.label1.Size = new System.Drawing.Size(384, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Community Profile Form";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -141,34 +146,37 @@ namespace information_technology_endterm_project
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(270, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(959, 598);
+            this.panel2.Size = new System.Drawing.Size(1071, 709);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtDate
             // 
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.Location = new System.Drawing.Point(686, 50);
+            this.txtDate.Location = new System.Drawing.Point(746, 72);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(212, 26);
             this.txtDate.TabIndex = 22;
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(342, 1054);
+            this.panel3.Location = new System.Drawing.Point(402, 1125);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 21;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(183, 998);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(271, 1060);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(520, 50);
+            this.button1.Size = new System.Drawing.Size(520, 59);
             this.button1.TabIndex = 20;
             this.button1.Text = "Insert Profile";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // HealthIfYesBox
@@ -179,7 +187,7 @@ namespace information_technology_endterm_project
             this.HealthIfYesBox.Controls.Add(this.cbHealthCenter);
             this.HealthIfYesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HealthIfYesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthIfYesBox.Location = new System.Drawing.Point(40, 908);
+            this.HealthIfYesBox.Location = new System.Drawing.Point(100, 957);
             this.HealthIfYesBox.Name = "HealthIfYesBox";
             this.HealthIfYesBox.Size = new System.Drawing.Size(701, 84);
             this.HealthIfYesBox.TabIndex = 17;
@@ -238,7 +246,7 @@ namespace information_technology_endterm_project
             this.rbShoolIfYesBox.Controls.Add(this.cbDaycare);
             this.rbShoolIfYesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbShoolIfYesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbShoolIfYesBox.Location = new System.Drawing.Point(40, 707);
+            this.rbShoolIfYesBox.Location = new System.Drawing.Point(100, 756);
             this.rbShoolIfYesBox.Name = "rbShoolIfYesBox";
             this.rbShoolIfYesBox.Size = new System.Drawing.Size(654, 84);
             this.rbShoolIfYesBox.TabIndex = 16;
@@ -295,7 +303,7 @@ namespace information_technology_endterm_project
             this.healthcarebox.Controls.Add(this.rbHealthNo);
             this.healthcarebox.Controls.Add(this.rbHealthYes);
             this.healthcarebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.healthcarebox.Location = new System.Drawing.Point(40, 807);
+            this.healthcarebox.Location = new System.Drawing.Point(100, 856);
             this.healthcarebox.Name = "healthcarebox";
             this.healthcarebox.Size = new System.Drawing.Size(411, 84);
             this.healthcarebox.TabIndex = 15;
@@ -334,7 +342,7 @@ namespace information_technology_endterm_project
             this.dyhsiycBox.Controls.Add(this.rbSchoolNo);
             this.dyhsiycBox.Controls.Add(this.rbSchoolYes);
             this.dyhsiycBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyhsiycBox.Location = new System.Drawing.Point(40, 608);
+            this.dyhsiycBox.Location = new System.Drawing.Point(100, 645);
             this.dyhsiycBox.Name = "dyhsiycBox";
             this.dyhsiycBox.Size = new System.Drawing.Size(358, 84);
             this.dyhsiycBox.TabIndex = 14;
@@ -352,6 +360,7 @@ namespace information_technology_endterm_project
             this.rbSchoolNo.TabStop = true;
             this.rbSchoolNo.Text = "No";
             this.rbSchoolNo.UseVisualStyleBackColor = true;
+            this.rbSchoolNo.CheckedChanged += new System.EventHandler(this.rbSchoolNo_CheckedChanged);
             // 
             // rbSchoolYes
             // 
@@ -369,7 +378,7 @@ namespace information_technology_endterm_project
             // txtBusiness
             // 
             this.txtBusiness.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusiness.Location = new System.Drawing.Point(40, 557);
+            this.txtBusiness.Location = new System.Drawing.Point(100, 586);
             this.txtBusiness.Name = "txtBusiness";
             this.txtBusiness.Size = new System.Drawing.Size(855, 26);
             this.txtBusiness.TabIndex = 19;
@@ -379,7 +388,7 @@ namespace information_technology_endterm_project
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(288, 518);
+            this.label9.Location = new System.Drawing.Point(348, 547);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(406, 20);
             this.label9.TabIndex = 18;
@@ -394,7 +403,7 @@ namespace information_technology_endterm_project
             this.fipmBox.Controls.Add(this.rb5k);
             this.fipmBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fipmBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fipmBox.Location = new System.Drawing.Point(40, 408);
+            this.fipmBox.Location = new System.Drawing.Point(100, 437);
             this.fipmBox.Name = "fipmBox";
             this.fipmBox.Size = new System.Drawing.Size(855, 84);
             this.fipmBox.TabIndex = 15;
@@ -469,7 +478,7 @@ namespace information_technology_endterm_project
             // txtNoS
             // 
             this.txtNoS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoS.Location = new System.Drawing.Point(640, 335);
+            this.txtNoS.Location = new System.Drawing.Point(700, 364);
             this.txtNoS.Name = "txtNoS";
             this.txtNoS.Size = new System.Drawing.Size(255, 26);
             this.txtNoS.TabIndex = 17;
@@ -479,7 +488,7 @@ namespace information_technology_endterm_project
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(487, 337);
+            this.label8.Location = new System.Drawing.Point(547, 366);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 20);
             this.label8.TabIndex = 16;
@@ -490,13 +499,13 @@ namespace information_technology_endterm_project
             this.tofBox.Controls.Add(this.rbSingleParent);
             this.tofBox.Controls.Add(this.rbExtended);
             this.tofBox.Controls.Add(this.rbNuclear);
-            this.tofBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tofBox.Location = new System.Drawing.Point(40, 305);
+            this.tofBox.Font = new System.Drawing.Font("Verdana", 12F);
+            this.tofBox.Location = new System.Drawing.Point(100, 334);
             this.tofBox.Name = "tofBox";
             this.tofBox.Size = new System.Drawing.Size(426, 84);
             this.tofBox.TabIndex = 15;
             this.tofBox.TabStop = false;
-            this.tofBox.Text = "type of family";
+            this.tofBox.Text = "Type of family";
             // 
             // rbSingleParent
             // 
@@ -543,13 +552,13 @@ namespace information_technology_endterm_project
             this.ageBox.Controls.Add(this.rb17_18);
             this.ageBox.Controls.Add(this.rb15_16);
             this.ageBox.Controls.Add(this.rbBelow15);
-            this.ageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageBox.Location = new System.Drawing.Point(273, 199);
+            this.ageBox.Font = new System.Drawing.Font("Verdana", 12F);
+            this.ageBox.Location = new System.Drawing.Point(442, 217);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(516, 84);
             this.ageBox.TabIndex = 14;
             this.ageBox.TabStop = false;
-            this.ageBox.Text = "age";
+            this.ageBox.Text = "Age";
             // 
             // rb19above
             // 
@@ -607,13 +616,13 @@ namespace information_technology_endterm_project
             // 
             this.sexBox.Controls.Add(this.rbFemale);
             this.sexBox.Controls.Add(this.rbMale);
-            this.sexBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexBox.Location = new System.Drawing.Point(40, 199);
+            this.sexBox.Font = new System.Drawing.Font("Verdana", 12F);
+            this.sexBox.Location = new System.Drawing.Point(100, 217);
             this.sexBox.Name = "sexBox";
             this.sexBox.Size = new System.Drawing.Size(193, 84);
             this.sexBox.TabIndex = 13;
             this.sexBox.TabStop = false;
-            this.sexBox.Text = "sex";
+            this.sexBox.Text = "Sex";
             // 
             // rbFemale
             // 
@@ -644,7 +653,7 @@ namespace information_technology_endterm_project
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(611, 144);
+            this.txtAddress.Location = new System.Drawing.Point(671, 166);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(287, 26);
             this.txtAddress.TabIndex = 12;
@@ -654,7 +663,7 @@ namespace information_technology_endterm_project
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(453, 147);
+            this.label7.Location = new System.Drawing.Point(513, 169);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 20);
             this.label7.TabIndex = 11;
@@ -663,7 +672,7 @@ namespace information_technology_endterm_project
             // txtHouseNo
             // 
             this.txtHouseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHouseNo.Location = new System.Drawing.Point(138, 144);
+            this.txtHouseNo.Location = new System.Drawing.Point(198, 166);
             this.txtHouseNo.Name = "txtHouseNo";
             this.txtHouseNo.Size = new System.Drawing.Size(281, 26);
             this.txtHouseNo.TabIndex = 10;
@@ -673,7 +682,7 @@ namespace information_technology_endterm_project
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 147);
+            this.label6.Location = new System.Drawing.Point(96, 169);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 9;
@@ -682,7 +691,7 @@ namespace information_technology_endterm_project
             // txtZoneSitio
             // 
             this.txtZoneSitio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZoneSitio.Location = new System.Drawing.Point(611, 95);
+            this.txtZoneSitio.Location = new System.Drawing.Point(671, 117);
             this.txtZoneSitio.Name = "txtZoneSitio";
             this.txtZoneSitio.Size = new System.Drawing.Size(287, 26);
             this.txtZoneSitio.TabIndex = 8;
@@ -692,7 +701,7 @@ namespace information_technology_endterm_project
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 98);
+            this.label5.Location = new System.Drawing.Point(96, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 7;
@@ -701,7 +710,7 @@ namespace information_technology_endterm_project
             // txtBarangay
             // 
             this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarangay.Location = new System.Drawing.Point(138, 95);
+            this.txtBarangay.Location = new System.Drawing.Point(198, 117);
             this.txtBarangay.Name = "txtBarangay";
             this.txtBarangay.Size = new System.Drawing.Size(281, 26);
             this.txtBarangay.TabIndex = 6;
@@ -711,7 +720,7 @@ namespace information_technology_endterm_project
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(453, 98);
+            this.label4.Location = new System.Drawing.Point(513, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 5;
@@ -722,7 +731,7 @@ namespace information_technology_endterm_project
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(636, 55);
+            this.label3.Location = new System.Drawing.Point(696, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 3;
@@ -731,7 +740,7 @@ namespace information_technology_endterm_project
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(101, 52);
+            this.txtName.Location = new System.Drawing.Point(161, 74);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(469, 26);
             this.txtName.TabIndex = 2;
@@ -740,7 +749,7 @@ namespace information_technology_endterm_project
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 55);
+            this.label2.Location = new System.Drawing.Point(96, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 1;
@@ -752,7 +761,7 @@ namespace information_technology_endterm_project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(23, 23);
+            this.button2.Location = new System.Drawing.Point(23, 171);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 54);
             this.button2.TabIndex = 0;
@@ -767,7 +776,7 @@ namespace information_technology_endterm_project
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(23, 82);
+            this.button3.Location = new System.Drawing.Point(23, 230);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(224, 54);
             this.button3.TabIndex = 1;
@@ -779,25 +788,71 @@ namespace information_technology_endterm_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.logoutButton);
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(20);
-            this.panel1.Size = new System.Drawing.Size(270, 598);
+            this.panel1.Size = new System.Drawing.Size(270, 709);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.Red;
+            this.logoutButton.Location = new System.Drawing.Point(23, 290);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(224, 54);
+            this.logoutButton.TabIndex = 30;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.pictureBox3.Image = global::information_technology_endterm_project.Properties.Resources.silbi_logo_removebg_preview_4_;
+            this.pictureBox3.Location = new System.Drawing.Point(40, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(158, 144);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(23, 623);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(224, 54);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "Delete Account";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // ProfilerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 598);
+            this.ClientSize = new System.Drawing.Size(1341, 709);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ProfilerForm";
             this.Text = "Form3";
+            this.Load += new System.EventHandler(this.ProfilerForm_Load_1);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.HealthIfYesBox.ResumeLayout(false);
@@ -817,6 +872,7 @@ namespace information_technology_endterm_project
             this.sexBox.ResumeLayout(false);
             this.sexBox.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -880,5 +936,8 @@ namespace information_technology_endterm_project
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button button4;
     }
 }

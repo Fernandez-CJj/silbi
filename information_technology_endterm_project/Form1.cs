@@ -13,8 +13,7 @@ namespace information_technology_endterm_project
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
+        public Form1()        {
             InitializeComponent();
 
         }
@@ -24,8 +23,15 @@ namespace information_technology_endterm_project
             txtPassword.PasswordChar = '*';
 
         }
+     
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegisterPage frm = new RegisterPage();
+            frm.Show();
+            this.Hide();
+        }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string connectionString = "server=localhost;user=root;password=;database=im_etr";
             string email = txtEmail.Text;
@@ -45,25 +51,32 @@ namespace information_technology_endterm_project
                         {
 
                             reader.Read(); // Move to the first row
+                            int userId = Convert.ToInt32(reader["id"]);
 
                             string role = reader["role"].ToString(); // Get the role value
 
                             if (role == "admin")
                             {
                                 MessageBox.Show("Welcome, Admin!");
+                                AdminDashboardForm frm = new AdminDashboardForm(userId);
+                                frm.Show();
+                                this.Hide();
                             }
                             else if (role == "profiler")
                             {
                                 MessageBox.Show("Welcome, Profiler!");
-                                ProfilerForm frm = new ProfilerForm();
+                                ProfilerForm frm = new ProfilerForm(userId);
                                 frm.Show();
                                 this.Hide();
                             }
                             else if (role == "user")
                             {
                                 MessageBox.Show("Welcome, Resident User!");
+                                UserDashboardForm frm = new UserDashboardForm(userId);
+                                frm.Show();
+                                this.Hide();
                             }
-                            
+
                         }
                         else
                         {
@@ -74,26 +87,9 @@ namespace information_technology_endterm_project
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            RegisterPage frm = new RegisterPage();
-            frm.Show();
-            this.Hide();
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            pictureBox1.BorderStyle = BorderStyle.None;
-
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-      
     }
 }

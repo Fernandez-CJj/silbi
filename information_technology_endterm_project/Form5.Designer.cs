@@ -82,6 +82,8 @@ namespace information_technology_endterm_project
             this.dyhsiycBox = new System.Windows.Forms.GroupBox();
             this.rbSchoolNo = new System.Windows.Forms.RadioButton();
             this.rbSchoolYes = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.fipmBox.SuspendLayout();
             this.tofBox.SuspendLayout();
             this.ageBox.SuspendLayout();
@@ -90,12 +92,14 @@ namespace information_technology_endterm_project
             this.rbShoolIfYesBox.SuspendLayout();
             this.healthcarebox.SuspendLayout();
             this.dyhsiycBox.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDate
             // 
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.Location = new System.Drawing.Point(815, 45);
+            this.txtDate.Location = new System.Drawing.Point(1010, 66);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(212, 26);
             this.txtDate.TabIndex = 43;
@@ -103,7 +107,7 @@ namespace information_technology_endterm_project
             // txtBusiness
             // 
             this.txtBusiness.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusiness.Location = new System.Drawing.Point(169, 552);
+            this.txtBusiness.Location = new System.Drawing.Point(364, 572);
             this.txtBusiness.Name = "txtBusiness";
             this.txtBusiness.Size = new System.Drawing.Size(855, 26);
             this.txtBusiness.TabIndex = 42;
@@ -113,7 +117,7 @@ namespace information_technology_endterm_project
             this.label9.AutoSize = true;
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(417, 513);
+            this.label9.Location = new System.Drawing.Point(612, 533);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(406, 20);
             this.label9.TabIndex = 41;
@@ -128,7 +132,7 @@ namespace information_technology_endterm_project
             this.fipmBox.Controls.Add(this.rb5k);
             this.fipmBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fipmBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fipmBox.Location = new System.Drawing.Point(169, 403);
+            this.fipmBox.Location = new System.Drawing.Point(364, 424);
             this.fipmBox.Name = "fipmBox";
             this.fipmBox.Size = new System.Drawing.Size(855, 84);
             this.fipmBox.TabIndex = 38;
@@ -198,7 +202,7 @@ namespace information_technology_endterm_project
             // txtNoS
             // 
             this.txtNoS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoS.Location = new System.Drawing.Point(769, 330);
+            this.txtNoS.Location = new System.Drawing.Point(964, 351);
             this.txtNoS.Name = "txtNoS";
             this.txtNoS.Size = new System.Drawing.Size(255, 26);
             this.txtNoS.TabIndex = 40;
@@ -208,7 +212,7 @@ namespace information_technology_endterm_project
             this.label8.AutoSize = true;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(616, 332);
+            this.label8.Location = new System.Drawing.Point(811, 353);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 20);
             this.label8.TabIndex = 39;
@@ -220,7 +224,7 @@ namespace information_technology_endterm_project
             this.tofBox.Controls.Add(this.rbExtended);
             this.tofBox.Controls.Add(this.rbNuclear);
             this.tofBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tofBox.Location = new System.Drawing.Point(169, 300);
+            this.tofBox.Location = new System.Drawing.Point(364, 321);
             this.tofBox.Name = "tofBox";
             this.tofBox.Size = new System.Drawing.Size(426, 84);
             this.tofBox.TabIndex = 37;
@@ -270,7 +274,7 @@ namespace information_technology_endterm_project
             this.ageBox.Controls.Add(this.rb15_16);
             this.ageBox.Controls.Add(this.rbBelow15);
             this.ageBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageBox.Location = new System.Drawing.Point(402, 194);
+            this.ageBox.Location = new System.Drawing.Point(706, 215);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(516, 84);
             this.ageBox.TabIndex = 36;
@@ -330,7 +334,7 @@ namespace information_technology_endterm_project
             this.sexBox.Controls.Add(this.rbFemale);
             this.sexBox.Controls.Add(this.rbMale);
             this.sexBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sexBox.Location = new System.Drawing.Point(169, 194);
+            this.sexBox.Location = new System.Drawing.Point(364, 215);
             this.sexBox.Name = "sexBox";
             this.sexBox.Size = new System.Drawing.Size(193, 84);
             this.sexBox.TabIndex = 35;
@@ -364,7 +368,7 @@ namespace information_technology_endterm_project
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(740, 139);
+            this.txtAddress.Location = new System.Drawing.Point(935, 160);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(287, 26);
             this.txtAddress.TabIndex = 34;
@@ -374,7 +378,7 @@ namespace information_technology_endterm_project
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(582, 142);
+            this.label7.Location = new System.Drawing.Point(777, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 20);
             this.label7.TabIndex = 33;
@@ -383,7 +387,7 @@ namespace information_technology_endterm_project
             // txtHouseNo
             // 
             this.txtHouseNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHouseNo.Location = new System.Drawing.Point(267, 139);
+            this.txtHouseNo.Location = new System.Drawing.Point(462, 160);
             this.txtHouseNo.Name = "txtHouseNo";
             this.txtHouseNo.Size = new System.Drawing.Size(281, 26);
             this.txtHouseNo.TabIndex = 32;
@@ -393,7 +397,7 @@ namespace information_technology_endterm_project
             this.label6.AutoSize = true;
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(165, 142);
+            this.label6.Location = new System.Drawing.Point(360, 163);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 20);
             this.label6.TabIndex = 31;
@@ -402,7 +406,7 @@ namespace information_technology_endterm_project
             // txtZoneSitio
             // 
             this.txtZoneSitio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZoneSitio.Location = new System.Drawing.Point(740, 90);
+            this.txtZoneSitio.Location = new System.Drawing.Point(935, 111);
             this.txtZoneSitio.Name = "txtZoneSitio";
             this.txtZoneSitio.Size = new System.Drawing.Size(287, 26);
             this.txtZoneSitio.TabIndex = 30;
@@ -412,7 +416,7 @@ namespace information_technology_endterm_project
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(165, 93);
+            this.label5.Location = new System.Drawing.Point(360, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 29;
@@ -421,7 +425,7 @@ namespace information_technology_endterm_project
             // txtBarangay
             // 
             this.txtBarangay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarangay.Location = new System.Drawing.Point(267, 90);
+            this.txtBarangay.Location = new System.Drawing.Point(462, 111);
             this.txtBarangay.Name = "txtBarangay";
             this.txtBarangay.Size = new System.Drawing.Size(281, 26);
             this.txtBarangay.TabIndex = 28;
@@ -431,7 +435,7 @@ namespace information_technology_endterm_project
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(582, 93);
+            this.label4.Location = new System.Drawing.Point(777, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 27;
@@ -442,7 +446,7 @@ namespace information_technology_endterm_project
             this.label3.AutoSize = true;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(765, 50);
+            this.label3.Location = new System.Drawing.Point(960, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 26;
@@ -451,7 +455,7 @@ namespace information_technology_endterm_project
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(230, 47);
+            this.txtName.Location = new System.Drawing.Point(425, 68);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(469, 26);
             this.txtName.TabIndex = 25;
@@ -460,7 +464,7 @@ namespace information_technology_endterm_project
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 50);
+            this.label2.Location = new System.Drawing.Point(360, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 24;
@@ -469,29 +473,33 @@ namespace information_technology_endterm_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(614, 9);
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(743, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(184, 44);
             this.label1.TabIndex = 23;
             this.label1.Text = "Edit Profile";
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(471, 1045);
+            this.panel3.Location = new System.Drawing.Point(667, 1100);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 49;
             // 
             // saveChangesButton
             // 
-            this.saveChangesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveChangesButton.Location = new System.Drawing.Point(312, 989);
+            this.saveChangesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.saveChangesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveChangesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveChangesButton.ForeColor = System.Drawing.Color.White;
+            this.saveChangesButton.Location = new System.Drawing.Point(546, 1023);
             this.saveChangesButton.Name = "saveChangesButton";
-            this.saveChangesButton.Size = new System.Drawing.Size(520, 50);
+            this.saveChangesButton.Size = new System.Drawing.Size(520, 71);
             this.saveChangesButton.TabIndex = 48;
             this.saveChangesButton.Text = "Save Changes";
-            this.saveChangesButton.UseVisualStyleBackColor = true;
+            this.saveChangesButton.UseVisualStyleBackColor = false;
             this.saveChangesButton.Click += new System.EventHandler(this.saveChangesButton_Click);
             // 
             // HealthIfYesBox
@@ -502,7 +510,7 @@ namespace information_technology_endterm_project
             this.HealthIfYesBox.Controls.Add(this.cbHealthCenter);
             this.HealthIfYesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HealthIfYesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthIfYesBox.Location = new System.Drawing.Point(169, 899);
+            this.HealthIfYesBox.Location = new System.Drawing.Point(364, 922);
             this.HealthIfYesBox.Name = "HealthIfYesBox";
             this.HealthIfYesBox.Size = new System.Drawing.Size(701, 84);
             this.HealthIfYesBox.TabIndex = 47;
@@ -557,7 +565,7 @@ namespace information_technology_endterm_project
             this.rbShoolIfYesBox.Controls.Add(this.cbDaycare);
             this.rbShoolIfYesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbShoolIfYesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbShoolIfYesBox.Location = new System.Drawing.Point(169, 698);
+            this.rbShoolIfYesBox.Location = new System.Drawing.Point(364, 721);
             this.rbShoolIfYesBox.Name = "rbShoolIfYesBox";
             this.rbShoolIfYesBox.Size = new System.Drawing.Size(654, 84);
             this.rbShoolIfYesBox.TabIndex = 46;
@@ -610,7 +618,7 @@ namespace information_technology_endterm_project
             this.healthcarebox.Controls.Add(this.rbHealthNo);
             this.healthcarebox.Controls.Add(this.rbHealthYes);
             this.healthcarebox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.healthcarebox.Location = new System.Drawing.Point(169, 798);
+            this.healthcarebox.Location = new System.Drawing.Point(364, 821);
             this.healthcarebox.Name = "healthcarebox";
             this.healthcarebox.Size = new System.Drawing.Size(411, 84);
             this.healthcarebox.TabIndex = 45;
@@ -648,7 +656,7 @@ namespace information_technology_endterm_project
             this.dyhsiycBox.Controls.Add(this.rbSchoolNo);
             this.dyhsiycBox.Controls.Add(this.rbSchoolYes);
             this.dyhsiycBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dyhsiycBox.Location = new System.Drawing.Point(169, 599);
+            this.dyhsiycBox.Location = new System.Drawing.Point(364, 619);
             this.dyhsiycBox.Name = "dyhsiycBox";
             this.dyhsiycBox.Size = new System.Drawing.Size(358, 84);
             this.dyhsiycBox.TabIndex = 44;
@@ -680,12 +688,36 @@ namespace information_technology_endterm_project
             this.rbSchoolYes.Text = "Yes";
             this.rbSchoolYes.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(20);
+            this.panel1.Size = new System.Drawing.Size(270, 1200);
+            this.panel1.TabIndex = 50;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.pictureBox3.Image = global::information_technology_endterm_project.Properties.Resources.silbi_logo_removebg_preview_4_;
+            this.pictureBox3.Location = new System.Drawing.Point(40, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(158, 144);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            // 
             // EditProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1341, 709);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.saveChangesButton);
             this.Controls.Add(this.HealthIfYesBox);
@@ -732,6 +764,8 @@ namespace information_technology_endterm_project
             this.healthcarebox.PerformLayout();
             this.dyhsiycBox.ResumeLayout(false);
             this.dyhsiycBox.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,5 +826,7 @@ namespace information_technology_endterm_project
         private System.Windows.Forms.GroupBox dyhsiycBox;
         private System.Windows.Forms.RadioButton rbSchoolNo;
         private System.Windows.Forms.RadioButton rbSchoolYes;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

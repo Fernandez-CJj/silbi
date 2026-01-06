@@ -30,6 +30,8 @@ namespace information_technology_endterm_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,7 +62,9 @@ namespace information_technology_endterm_project
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DeleteAccountButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             this.healthcarebox.SuspendLayout();
             this.dyhsiycBox.SuspendLayout();
@@ -71,6 +75,9 @@ namespace information_technology_endterm_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.panel1.Controls.Add(this.DeleteAccountButton);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.logoutButton);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -80,13 +87,40 @@ namespace information_technology_endterm_project
             this.panel1.Size = new System.Drawing.Size(270, 709);
             this.panel1.TabIndex = 2;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.pictureBox3.Image = global::information_technology_endterm_project.Properties.Resources.silbi_logo_removebg_preview_4_;
+            this.pictureBox3.Location = new System.Drawing.Point(50, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(158, 144);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 32;
+            this.pictureBox3.TabStop = false;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.Red;
+            this.logoutButton.Location = new System.Drawing.Point(23, 280);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(224, 54);
+            this.logoutButton.TabIndex = 31;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
             // button3
             // 
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(23, 82);
+            this.button3.Location = new System.Drawing.Point(23, 220);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(224, 54);
             this.button3.TabIndex = 1;
@@ -100,13 +134,14 @@ namespace information_technology_endterm_project
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(23, 23);
+            this.button2.Location = new System.Drawing.Point(23, 161);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 54);
             this.button2.TabIndex = 0;
             this.button2.Text = "Create Profile";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel2
             // 
@@ -466,6 +501,21 @@ namespace information_technology_endterm_project
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // DeleteAccountButton
+            // 
+            this.DeleteAccountButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(74)))), ((int)(((byte)(134)))));
+            this.DeleteAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteAccountButton.ForeColor = System.Drawing.Color.Red;
+            this.DeleteAccountButton.Location = new System.Drawing.Point(23, 632);
+            this.DeleteAccountButton.Name = "DeleteAccountButton";
+            this.DeleteAccountButton.Size = new System.Drawing.Size(224, 54);
+            this.DeleteAccountButton.TabIndex = 33;
+            this.DeleteAccountButton.Text = "Delete Account";
+            this.DeleteAccountButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteAccountButton.UseVisualStyleBackColor = true;
+            this.DeleteAccountButton.Click += new System.EventHandler(this.DeleteAccountButton_Click);
+            // 
             // ViewProfiles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +527,7 @@ namespace information_technology_endterm_project
             this.Text = "Form4";
             this.Load += new System.EventHandler(this.ViewProfiles_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.healthcarebox.ResumeLayout(false);
@@ -523,5 +574,8 @@ namespace information_technology_endterm_project
         private System.Windows.Forms.RadioButton rbHealthYes;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button DeleteAccountButton;
     }
 }

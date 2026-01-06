@@ -20,15 +20,24 @@ namespace information_technology_endterm_project
         int clinic = 0;
         int publich = 0;
         int privateh = 0;
-        
-        public ProfilerForm()
+
+        int userId;
+        public ProfilerForm(int id)
         {
             InitializeComponent();
+            userId = id;
         }
 
         private void ProfilerForm_Load(object sender, EventArgs e)
         {
-
+            cbHealthCenter.Enabled = !true;
+            cbClinic.Enabled = !true;
+            cbPublicH.Enabled = !true;
+            cbPrivateH.Enabled = !true;
+            cbDaycare.Enabled = false;
+            cbElementary.Enabled = false;
+            cbhighschool.Enabled = false;
+            cbCollege.Enabled = false;
         }
 
         private bool ValidateForm()
@@ -347,6 +356,10 @@ namespace information_technology_endterm_project
             {
                 hasSchools = 1;
             }
+            cbDaycare.Enabled = !false;
+            cbElementary.Enabled = !false;
+            cbhighschool.Enabled = !false;
+            cbCollege.Enabled = !false;
         }
 
         private void cbDaycare_CheckedChanged(object sender, EventArgs e)
@@ -403,6 +416,10 @@ namespace information_technology_endterm_project
             {
                 hasHealthCare = 1;
             }
+            cbHealthCenter.Enabled = true;
+            cbClinic.Enabled = true;
+            cbPublicH.Enabled = true;
+            cbPrivateH.Enabled = true;
         }
 
         private void rbHealthNo_CheckedChanged(object sender, EventArgs e)
@@ -411,6 +428,14 @@ namespace information_technology_endterm_project
             {
                 hasHealthCare = 0;
             }
+            cbHealthCenter.Enabled = !true;
+            cbClinic.Enabled = !true;
+            cbPublicH.Enabled = !true;
+            cbPrivateH.Enabled = !true;
+            cbHealthCenter.Checked = false;
+            cbClinic.Checked = false;
+            cbPublicH.Checked = false;
+            cbPrivateH.Checked = false;
         }
 
         private void cbHealthCenter_CheckedChanged(object sender, EventArgs e)
@@ -513,9 +538,11 @@ namespace information_technology_endterm_project
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ValidateForm())
+            if (ValidateForm()) { 
                 InsertProfile();
-            ClearForm();
+                ClearForm();
+            }
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -525,14 +552,14 @@ namespace information_technology_endterm_project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ProfilerForm frm = new ProfilerForm();
+            ProfilerForm frm = new ProfilerForm(userId);
             frm.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ViewProfiles frm = new ViewProfiles();
+            ViewProfiles frm = new ViewProfiles(userId);
             frm.Show();
             this.Hide();
         }
@@ -540,6 +567,92 @@ namespace information_technology_endterm_project
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbSchoolNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbSchoolYes.Checked)
+            {
+                hasSchools = 0;
+            }
+            cbDaycare.Enabled = false;
+            cbElementary.Enabled = false;
+            cbhighschool.Enabled = false;
+            cbCollege.Enabled = false;
+            cbDaycare.Checked = false;
+            cbElementary.Checked = false;
+            cbhighschool.Checked = false;
+            cbCollege.Checked = false;
+        }
+
+        private void ProfilerForm_Load_1(object sender, EventArgs e)
+        {
+            cbHealthCenter.Enabled = !true;
+            cbClinic.Enabled = !true;
+            cbPublicH.Enabled = !true;
+            cbPrivateH.Enabled = !true;
+            cbDaycare.Enabled = false;
+            cbElementary.Enabled = false;
+            cbhighschool.Enabled = false;
+            cbCollege.Enabled = false;
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+        "Are you sure you want to DELETE your account? This cannot be undone.",
+        "Confirm Delete Account",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Warning
+    );
+
+            if (confirm == DialogResult.Yes)
+            {
+                string connectionString = "server=localhost;user=root;password=;database=im_etr";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    try
+                    {
+                        conn.Open();
+                        string sql = "DELETE FROM users WHERE id = @id";
+                        using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@id", userId);
+                            int rows = cmd.ExecuteNonQuery();
+
+                            if (rows > 0)
+                            {
+                                MessageBox.Show("Account deleted successfully. Logging out...");
+
+                                // Show login form and close this form
+                                Form1 login = new Form1();
+                                login.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Delete failed: Account not found.");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error deleting account: " + ex.Message);
+                    }
+                }
+            }
         }
     }
 }
